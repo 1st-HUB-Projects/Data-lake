@@ -10,7 +10,7 @@ from io import BytesIO
 DYNAMODB_TABLE_NAME = "UpDoc"
 
 # Initialize AWS clients
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb' , region_name='us-east-1')
 table = dynamodb.Table(DYNAMODB_TABLE_NAME)
 
 def display_data():
